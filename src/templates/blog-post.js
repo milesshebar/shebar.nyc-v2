@@ -1,21 +1,40 @@
 import React from "react"
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import { FaArrowUp, FaChevronRight, FaChevronLeft } from "react-icons/fa"
+
 class BlogPostTemplate extends React.Component {
   render() {
+    const { previous, next } = this.props.pageContext
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
+        <nav className="prev-next-links">
+          {next && (
+            <Link id="next" to={next.fields.slug}>
+              <span>
+                <FaChevronLeft />
+              </span>
+            </Link>
+          )}
+          {previous && (
+            <Link id="prev" to={previous.fields.slug}>
+              <span>
+                <FaChevronRight />
+              </span>
+            </Link>
+          )}
+        </nav>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
+
         <article
           className={`post-content ${post.frontmatter.thumbnail || `no-image`}`}
         >
@@ -27,27 +46,21 @@ class BlogPostTemplate extends React.Component {
             <p class="post-content-excerpt">{post.frontmatter.description}</p>
           )}
 
-          {post.frontmatter.thumbnail && (
-            <div className="post-content-image">
-              <Img
-                className="kg-image"
-                fluid={post.frontmatter.thumbnail.childImageSharp.fluid}
-                alt={post.frontmatter.title}
-              />
-            </div>
-          )}
-
           <div
             className="post-content-body"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
-
-          <footer className="post-content-footer">
-            {/* There are two options for how we display the byline/author-info.
-        If the post has more than one author, we load a specific template
-        from includes/byline-multiple.hbs, otherwise, we just use the
-        default byline. */}
-          </footer>
+          {post.frontmatter.materials && (
+            <p className="kg-card" style={{ textAlign: "center" }}>
+              <strong>Tools</strong>: {post.frontmatter.materials}
+            </p>
+          )}
+          <p style={{ textAlign: "center" }}>
+            {" "}
+            <a href="#top">
+              <FaArrowUp />
+            </a>
+          </p>
         </article>
       </Layout>
     )
@@ -72,6 +85,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        materials
         thumbnail {
           childImageSharp {
             fluid(maxWidth: 1360) {

@@ -1,0 +1,4 @@
+Binary Theremin, 2018
+Xbox Kinect v2, Max/MSP, Ableton Live, Speakers, Projection
+
+Binary Theremin is a multimedia instrument users can play by moving their body. As a musician with no instrumental ability, I set out to create a physical means of composition that wasn’t tied to a physical object. My hope is that through interacting with the piece, musicians and non-musicians alike will find inspiration in the unique audiovisual experience they create for themselves.

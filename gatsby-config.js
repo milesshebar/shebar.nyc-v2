@@ -31,6 +31,16 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: "gatsby-remark-audio",
+            options: {
+              preload: "auto",
+              loop: false,
+              controls: true,
+              muted: false,
+              autoplay: false,
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1360,
@@ -38,6 +48,22 @@ module.exports = {
               showCaptions: true,
               quality: 75,
               wrapperStyle: `margin: 7vw 0;`,
+            },
+          },
+          {
+            resolve: "gatsby-remark-embed-video",
+            options: {
+              width: 1360,
+              ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
+              related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
+              noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
+              urlOverrides: [
+                {
+                  id: "youtube",
+                  embedURL: videoId =>
+                    `https://www.youtube-nocookie.com/embed/${videoId}`,
+                },
+              ], //Optional: Override URL of a service provider, e.g to enable youtube-nocookie support
             },
           },
           {
@@ -52,6 +78,7 @@ module.exports = {
         ],
       },
     },
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -68,7 +95,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
-        printRejected: true, // Print removed selectors and processed file names
+        // printRejected: true, // Print removed selectors and processed file names
         // develop: true, // Enable while using `gatsby develop`
         // tailwind: true, // Enable tailwindcss support
         // whitelist: ['whitelist'], // Don't remove this selector
@@ -79,7 +106,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-22892278-2`,
       },
     },
     `gatsby-plugin-feed`,
@@ -90,7 +117,7 @@ module.exports = {
         short_name: siteConfig.shortName,
         start_url: siteConfig.prefix,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#98191b`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },

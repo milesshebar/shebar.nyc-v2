@@ -1,5 +1,21 @@
 import React from "react"
 import { Link } from "gatsby"
+import {
+  FaInstagram,
+  FaImdb,
+  FaLinkedinIn,
+  FaTheaterMasks,
+  FaGithub,
+} from "react-icons/fa"
+
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]', {
+    speed: 800,
+    speedAsDuration: true,
+    easing: "easeInOutCubic",
+  })
+}
 
 const Layout = props => {
   const { title, children } = props
@@ -10,7 +26,7 @@ const Layout = props => {
         <div className="site-head-container">
           <a
             className="nav-burger"
-            href={`#`}
+            href={`#top`}
             onClick={() => setToggleNav(!toggleNav)}
           >
             <div
@@ -26,48 +42,84 @@ const Layout = props => {
           </a>
           <nav id="swup" class="site-head-left">
             <ul className="nav" role="menu">
-              <li className="nav-home nav-current" role="menuitem">
-                <Link to={`/`}>Home</Link>
+              <li className="nav-home" role="menuitem">
+                <Link
+                  activeStyle={{ opacity: 1 }}
+                  to="/"
+                  activeClassName="nav-current"
+                >
+                  Home
+                </Link>
               </li>
               <li className="nav-about" role="menuitem">
-                <Link to={`/about`}>About</Link>
+                <Link activeStyle={{ opacity: 1 }} to={`/about`}>
+                  About
+                </Link>
               </li>
               <li className="nav-elements" role="menuitem">
-                <Link to={`/elements`}>Elements</Link>
+                <Link activeStyle={{ opacity: 1 }} to={`/video`}>
+                  Video
+                </Link>
+              </li>
+              <li className="nav-elements" role="menuitem">
+                <Link activeStyle={{ opacity: 1 }} to={`/sound`}>
+                  Sound
+                </Link>
+              </li>
+              <li className="nav-elements" role="menuitem">
+                <Link activeStyle={{ opacity: 1 }} to={`/web`}>
+                  Web
+                </Link>
               </li>
             </ul>
           </nav>
           <div className="site-head-center">
             <Link className="site-head-logo" to={`/`}>
-              {title}
+              shebar.nyc
             </Link>
           </div>
           <div className="site-head-right">
             <div className="social-links">
               <a
-                href="https://www.facebook.com"
-                title="Facebook"
+                href="https://www.instagram.com/milesshebar"
+                title="Instagram"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Facebook
+                <FaInstagram />
               </a>
               <a
-                href="https://twitter.com"
-                title="Twitter"
+                href="https://imdb.me/milesshebar"
+                title="IMDB"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Twitter
+                <FaImdb />
               </a>
-              <Link
-                to={`/rss.xml`}
-                title="RSS"
+              <a
+                href="https://linkedin.com/in/milesshebar"
+                title="Linkedin"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                RSS
-              </Link>
+                <FaLinkedinIn />
+              </a>
+              <a
+                href="https://github.com/milesshebar"
+                title="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://milesshebar.com"
+                title="Acting"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTheaterMasks />
+              </a>
             </div>
           </div>
         </div>
@@ -78,15 +130,7 @@ const Layout = props => {
         </div>
       </main>
       <footer className="site-foot">
-        &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link> &mdash;
-        Built with{" "}
-        <a
-          href="https://gatsbyjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Gatsby
-        </a>
+        &copy; {new Date().getFullYear()} &mdash; <Link to={`/`}>{title}</Link>
       </footer>
     </div>
   )

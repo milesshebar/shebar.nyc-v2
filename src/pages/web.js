@@ -25,10 +25,14 @@ const ElementsPage = ({ data }, location) => {
 
       <article className="post-content page-template no-image">
         <h1 class="post-content-title">Web</h1>
-        <p class="post-content-excerpt">
-          Designer and developer.
+        <p class="post-content-excerpt">Designer and developer.</p>
+        <p style={{ textAlign: "center" }}>
+          Jump to section:
+          <br />
+          <a href="#web-design">Web Design</a> • <a href="#netart">net.art</a>
         </p>
         <div className="post-content-body">
+          <h2 id="web-design">Web Design</h2>
           <figure className="kg-card kg-image-card ">
             <Img
               fluid={data.siteArt.childImageSharp.fluid}
@@ -174,6 +178,34 @@ const ElementsPage = ({ data }, location) => {
               2018
             </span>
           </figure>
+          <hr />
+          <h2 id="netart">net.art</h2>
+          <figure className="kg-card kg-image-card">
+            <Img
+              fluid={data.kokoflow.childImageSharp.fluid}
+              className="kg-image"
+              alt="Detail of kokoflow homepage"
+            />
+
+            <figcaption>
+              <em>Kokoflow</em> <span style={{ fontWeight: "200" }}>2019</span>
+            </figcaption>
+            <h6>
+              <a
+                href="https://shebar.xyz/kokoflow"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <em>Kokoflow</em>
+              </a>{" "}
+            </h6>
+
+            <p>
+              A website that uses live USGS data to show the live flow speed of
+              the Kokosing river, in cubic feet per second.
+            </p>
+            <span className="site_metadata">jQuery</span>
+          </figure>{" "}
           <hr />
           <figure className="kg-card kg-image-card">
             <video

@@ -6,23 +6,13 @@ materials: After Effects, cellphone camera
 description: Magically real combinations of still images and animation.
 ---
 
-<figure class="kg-card kg-image-card kg-width-full">
-
-
-`video: https://www.youtube.com/embed/hWD1clms6Ng`
-
-</figure>
-
-
 <figure class="kg-card kg-image-card">
-
 
 <video style="display:block; margin:0 auto;width: 350px;" preload="auto" autoplay loop playsinline>
     <source src="duane.mp4">
 </video>
 
 <figcaption><em>duane</em> <span style="font-weight:200;">2016</span></figcaption>
-
 
 </figure>
 
@@ -34,12 +24,9 @@ description: Magically real combinations of still images and animation.
 
 <figcaption><em>the poles</em> <span style="font-weight:200;">2017</span></figcaption>
 
-
 </figure>
 
-
 <figure class="kg-card kg-image-card">
-
 
 <video  style="display:block; margin:0 auto;width: 100%;" preload="auto" autoplay loop playsinline>
     <source src="cg_minibuilding_new.mp4">
@@ -49,9 +36,7 @@ description: Magically real combinations of still images and animation.
 
 </figure>
 
-
 <figure class="kg-card kg-image-card">
-
 
 <video style="display:block; margin:0 auto;width: 100%;" preload="auto" autoplay loop playsinline>
     <source src="magere.mp4">
@@ -59,8 +44,9 @@ description: Magically real combinations of still images and animation.
 
 <figcaption><em>Magere</em> <span style="font-weight:200;">2019</span></figcaption>
 
-
 </figure>
+
+`video: https://www.youtube.com/embed/hWD1clms6Ng`
 
 <figure class="kg-card kg-image-card">
 <div class="row">
@@ -80,12 +66,7 @@ description: Magically real combinations of still images and animation.
 </div>
 </div>
 
-
 </figure>
-
-
-
-
 
 <figure class="kg-card kg-image-card">
 
@@ -96,13 +77,10 @@ description: Magically real combinations of still images and animation.
 
 <figure class="kg-card kg-image-card">
 
-
-
 <video style="display:block; margin:0 auto;width: 100%;" preload="auto" autoplay loop playsinline>
     <source src="vissen.mp4">
 </video>
 
 <figcaption><em>vissen</em> <span style="font-weight:200;">2019</span></figcaption>
-
 
 </figure>

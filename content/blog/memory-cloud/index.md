@@ -2,16 +2,13 @@
 title: memory cloud
 date: "2020-05-14"
 thumbnail: ./Shebar-06.jpg
-site: https://shebar.nyc
-instagram: https://www.instagram.com/milesshebar/
 materials: raspberry pis, portable speakers, poplar, paint
-measurements: 1’ x 1’ x 8’ (6 towers)
-description: Sound installation that plays recordings of every single interaction I've ever had with the Google Assistant.
+description: Sound installation that plays recordings of every interaction I've ever had with the Google Assistant.
 ---
 
 <div class="kg-card kg-image-card kg-width-wide">
 
-![Miles Shebar](./Shebar-06.jpg)
+![3d rendering of speaker towers](./Shebar-06.jpg)
 
 </div>
 
@@ -21,7 +18,7 @@ But in practice, it has also taken on the uglier parts of humanity, reinforcing 
 
 <div class="kg-card kg-image-card kg-width-full">
 
-![Miles Shebar](./Shebar-04.jpg)
+![3d rendering of speaker towers, detail](./Shebar-04.jpg)
 
 </div>
 
@@ -31,7 +28,7 @@ As part of my senior exercise in Studio Art at Kenyon College, it was going to b
 
 <div class="kg-card kg-image-card kg-width-full">
 
-![Miles Shebar](./Shebar-02.jpg)
+![3d rendering of speaker towers, wide](./Shebar-02.jpg)
 
 </div>
 
@@ -47,10 +44,10 @@ The 6000+ audio recordings the piece presents are a swirling minefield of random
 
 The content and the structure of the piece contrast markedly with each other, reminding the viewer that their own digital consciousness — a treasure trove of forgotten memories — is in a massive data center somewhere too, and could be presented in this manner just as easily.
 
-![Miles Shebar](./Shebar-01.jpg)
+![Image of prototype tower](./Shebar-01.jpg)
 
 <div class="kg-card kg-image-card kg-width-full">
 
-![Miles Shebar](./Shebar-07.jpg)
+![Gallery mockup of installation](./Shebar-07.jpg)
 
 </div>

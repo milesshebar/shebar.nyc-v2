@@ -1,4 +1,4 @@
-# 🚀 [shebar.nyc-v2](https://github.com/milesshebar/shebar.nyc-v2)
+# 🚀 [shebar.nyc-v2](https://shebar.nyc)
 
 ---
 
